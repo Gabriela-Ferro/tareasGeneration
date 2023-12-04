@@ -10,7 +10,7 @@ const cargarInfo = async () => {
       console.log('Obteniendo datos guardados en localStorage.');
       mostrarDatos(JSON.parse(datosGuardados));
     } else {
-      console.log('Solicitud al servidor.');
+      console.log('Solicitud nueva al servidor.');
       const respuesta = await fetch('https://reqres.in/api/users?delay=3');
       if (respuesta.status === 200) {
         const datosDeRespuesta = await respuesta.json();
